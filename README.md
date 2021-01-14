@@ -2,7 +2,7 @@
 
 Python Selenium modülü ile geliştirildi.
 
-## Yapısı : Page Object Model
+## Proje Yapısı : Page Object Model
 
 ## Pages
 ### Base Page 
