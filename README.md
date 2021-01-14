@@ -17,6 +17,10 @@ Her sayfa için class yapısı oluşturuldu. POM
 
 Web elementlerinin bakımını kolaylaştırmak için locators altında web elementler toplandı.
 
+### userCredentials
+
+Trendyol web sitesine giriş yapılırken gerekli test kullanıcısı tutulmaktadır.
+
 ### TestCases
 
 - Trendyol anasayfasına gidildiğinde sayfanın yüklenmesi gerekir.
