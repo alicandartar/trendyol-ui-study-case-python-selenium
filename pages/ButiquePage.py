@@ -2,6 +2,8 @@ from selenium.webdriver import ActionChains
 import logging
 from utils.locators import *
 #from utils.users import Users
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 logging.basicConfig(filename='../trendyol-ui-study/logs/logfile.log', format='%(asctime)s: %(levelname)s: %(message)s', datefmt='%m/%d/%Y:%M:%S %p', level=logging.DEBUG)
@@ -34,7 +36,10 @@ class ButiquePage():
 
     def checkProductImagesInStore(self):
         driver = self.driver
-        time.sleep(1)
+        #time.sleep(1)
+        timeout = 10
+        element_present = EC.presence_of_element_located((By.CLASS_NAME, 'p-card-wrppr'))#wait till exist func
+        WebDriverWait(driver, timeout).until(element_present)
         productCount = len(driver.find_elements_by_class_name("p-card-wrppr")) #boutique-product bazı butiklerde ürünler bu class ile geliyor bazılarında farklı.
         print("Bu sayfada" + str(productCount) + "ürün bulunmaktadır.")
 
